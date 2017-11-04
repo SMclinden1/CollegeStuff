@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--This is the name of the page -->
+		<title>Contact Us</title>
+		<!-- Below the css is being set up -->
+		<style type="text/css">
+			* {
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				color: #000000;
+				text-align: center;}
+			body {
+				width: 960px;
+				margin: 0 auto;
+				background-image: url("Images/background.jpg");}
+			#content {
+				overflow: auto;
+				height: 100%;}
+			#nav, #feature, #footer {
+				background-color: #33ff33;
+				padding: 10px;
+				margin: 10px;}
+			.column1, .column2, .column3 {
+				background-color: #33ff33;
+				width: 300px;
+				float: left;
+				margin: 10px;}
+			li {
+				display: inline;
+				padding: 5px;}
+			}
+		</style>
+	</head>
+	<body>
+	<!-- This is the title of the page -->
+	<img src="Images/title.png"
+			 alt="Title"
+			 title="Title"
+			 width="100%" height="300" />
+				<ul>
+				<!--Below are all of the links to other pages -->
+					<div id="nav">
+					<li><a href="Index.html">Home</a></li>
+					<li><a href="AboutUs.html">About us</a></li>
+					<li><a href="ContactUs.html">Contact us</a></li>
+					<li><a href="CrazyPage.html">Crazy Page</a></li>
+					<li><a href="Products.html">Products</a></li>
+					</div>
+				</ul>
+			</div>
+		</div>
+		<div id="feature">
+        <fieldset>
+		<!--Below is the form -->
+            <legend>Submit</legend>
+            <div><label for="fname">First Name</label>
+			<input type="text" name="fname" id="fname" required="required"></div>
+            <div><label for="sname">Surname</label>
+			<input type="text" name="sname" id="sname" required="required"></div>
+			<div><label for="email">Email</label>
+			<input type="text" name="email" id="email" required="required"></div>
+			<div><label for="num">Phone Number</label>
+			<input type="text" name="num" id="num" required="required"></div>
+			<div><label for="text">Message</label>
+			<input type="text" name="text" id="text" required="required"></div>
+			
+            <div><input type="submit" value="Submit &rarr;" id="submit"></div>
+			<div><input type="reset" value="Reset &rarr;" id="reset"></div>
+        </fieldset>
+    </form>
+    <script src="Javascript/ContactUsScript.js"></script>
+	<div id="feature">
+	<!--Text below the form -->
+				<p>Welcome to the only website you need</p>
+				<p>KUSH KAPITAL.</p>
+				<p>This is our contact page to allow users to</p>
+				<p>get in touch with the us!</p>
+			</div>
+		</div>
+		<!--Logo at the bottom of every page-->
+		<img src="Images/logo.png"
+			 alt="logo"
+			 title="logo"
+			 width="425" height="355" />
+		<div id="footer">
+		<!--This is the footer of the page -->
+			<p> The website was an original product by &copy;S&reg;Mclinden&trade;, any attempt to recreate is STUPID!</p>
+		</div>	
+	</body>
+</html>

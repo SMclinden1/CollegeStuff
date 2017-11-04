@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--This is the name of the page -->
+		<title>CrazyPage</title>
+		<!-- Below the css is being set up -->
+		<style type="text/css">
+			* {
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				color: #000000;
+				text-align: center;}
+			body {
+				width: 960px;
+				margin: 0 auto;
+				background: url(Images/trippy.gif) no-repeat center center fixed; 
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;}
+			#content {
+				overflow: auto;
+				height: 100%;}
+			#nav, #feature, #footer {
+				background-color: #33ff33;
+				padding: 10px;
+				margin: 10px;}
+			.column1, .column2, .column3 {
+				background-color: #33ff33;
+				width: 300px;
+				float: left;
+				margin: 10px;}
+			img {
+				-webkit-transition: -webkit-transform 2s ease-out;
+				}
+			li {
+				display: inline;
+				padding: 5px;}
+			}
+		</style>
+		<script>
+		//start of a function for the clock
+		function startTime() {
+		//setting up variables
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		//Checking the real time
+		m = checkTime(m);
+		s = checkTime(s);
+		//finding the clock element
+		document.getElementById('clock').innerHTML =
+		h + ":" + m + ":" + s;
+		var t = setTimeout(startTime, 500);
+	}
+	//Start of function for the button to move an image
+	function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+	}
+	//Setting up a function for a moving image
+	var intX = 1100;
+	function move(){
+    var objDiv = document.getElementById('id1');
+    if ( objDiv != null ) {
+        objDiv.style.left = (intX -= 3).toString() + 'px';
+        } //if statement
+    if ( intX > 0 ) { setTimeout(move,20); }
+	return true;
+	}
+
+</script>
+	</head>
+	<body onload="startTime()">
+			<!-- Loading images around logo-->
+			<img src="Images/spacegif.gif"
+					alt="space gif"
+					title="spacey gif"
+					width="200" height="300" />
+			<img src="Images/spacegif.gif"
+					alt="space gif"
+					title="spacey gif"
+					width="200" height="300" />
+			<img src="Images/spacegif.gif"
+					alt="space gif"
+					title="spacey gif"
+					width="200" height="300" />
+			<img src="Images/spacegif.gif"
+					alt="space gif"
+					title="spacey gif"
+					width="200" height="300" />
+		<!--This is the title of the page -->
+		<img src="Images/title.png"
+			 alt="Title"
+			 title="Title"
+			 width="100%" height="300" />
+		<!-- Loading clock-->
+		<div id="clock"></div>
+			<!-- Loading images around logo-->
+			<img src="Images/spacegif.gif"
+					alt="space gif"
+					title="spacey gif"
+					width="200" height="300" />
+			<img src="Images/spacegif.gif"
+					alt="space gif"
+					title="spacey gif"
+					width="200" height="300" />
+			<img src="Images/spacegif.gif"
+					alt="space gif"
+					title="spacey gif"
+					width="200" height="300" />
+			<img src="Images/spacegif.gif"
+					alt="space gif"
+					title="spacey gif"
+					width="200" height="300" />
+				<ul>
+				<!--Below are all of the links to other pages -->
+					<div id="nav">
+					<li><a href="Index.html">Home</a></li>
+					<li><a href="AboutUs.html">About us</a></li>
+					<li><a href="ContactUs.html">Contact us</a></li>
+					<li><a href="CrazyPage.html">Crazy Page</a></li>
+					<li><a href="Products.html">Products</a></li>
+					</div>
+				</ul>
+			</div>
+			<!-- This is an image that when a button is pressed will run the move function -->
+			<div id="id1" class="divclass" style="left:1100px; position:absolute; white-space:nowrap;"><img
+			 width="400" 
+			 height="400" 
+			 src="Images/logo.png"
+			 />		</div>
+			 <!-- This is the button -->
+			<input type="button" onclick="move()" value="move">	 
+	</body>
+</html>				   			   
